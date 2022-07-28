@@ -2,9 +2,10 @@ class ApiThird {
   ApiThird({
     required this.message,
   });
+
   late final Message message;
 
-  ApiThird.fromJson(Map<String, dynamic> json){
+  ApiThird.fromJson(Map<String, dynamic> json) {
     message = Message.fromJson(json['message']);
   }
 
@@ -20,10 +21,11 @@ class Message {
     required this.header,
     required this.body,
   });
+
   late final Header header;
   late final Body body;
 
-  Message.fromJson(Map<String, dynamic> json){
+  Message.fromJson(Map<String, dynamic> json) {
     header = Header.fromJson(json['header']);
     body = Body.fromJson(json['body']);
   }
@@ -41,10 +43,11 @@ class Header {
     required this.statusCode,
     required this.executeTime,
   });
+
   late final int statusCode;
   late final double executeTime;
 
-  Header.fromJson(Map<String, dynamic> json){
+  Header.fromJson(Map<String, dynamic> json) {
     statusCode = json['status_code'];
     executeTime = json['execute_time'];
   }
@@ -61,9 +64,10 @@ class Body {
   Body({
     required this.lyrics,
   });
+
   late final Lyrics lyrics;
 
-  Body.fromJson(Map<String, dynamic> json){
+  Body.fromJson(Map<String, dynamic> json) {
     lyrics = Lyrics.fromJson(json['lyrics']);
   }
 
@@ -84,6 +88,7 @@ class Lyrics {
     required this.lyricsCopyright,
     required this.updatedTime,
   });
+
   late final int lyricsId;
   late final int explicit;
   late final String lyricsBody;
@@ -92,7 +97,7 @@ class Lyrics {
   late final String lyricsCopyright;
   late final String updatedTime;
 
-  Lyrics.fromJson(Map<String, dynamic> json){
+  Lyrics.fromJson(Map<String, dynamic> json) {
     lyricsId = json['lyrics_id'];
     explicit = json['explicit'];
     lyricsBody = json['lyrics_body'];

@@ -21,23 +21,18 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           primarySwatch: Colors.blue,
         ),
-        home:  MyHomePage(),
+        home: MyHomePage(),
       ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,13 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
             // TODO: implement listener
           },
           builder: (context, state) {
-            if(state == InternateState.Lost){
+            if (state == InternateState.Lost) {
               return Text("not Connecedt");
-            }
-            else if(state == InternateState.Gain){
+            } else if (state == InternateState.Gain) {
               return HomeScreen();
-            }
-            else{
+            } else {
               return CircularProgressIndicator(
                 color: Colors.red,
               );
