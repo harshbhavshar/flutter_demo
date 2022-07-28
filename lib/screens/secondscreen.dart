@@ -156,10 +156,14 @@ class _SecondScreenState extends State<SecondScreen> {
                 ],
               ),
             );
-          } else {
+          }
+           else if(state == InternateState.Lost) {
             return Center(
               child: Text('Check Your Connection'),
             );
+          }
+           else{
+             return CircularProgressIndicator();
           }
         },
       ),
